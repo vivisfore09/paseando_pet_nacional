@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.os.PersistableBundle
 import android.provider.MediaStore
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
@@ -22,6 +23,9 @@ class RegistrarMascota: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrarMascotaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val email=intent.getStringExtra("email")
+        Toast.makeText(this,"Bienvenido........$email", Toast.LENGTH_LONG).show()
 
         binding.tomarFoto.setOnClickListener{
             //abrirCamara.launch(Intent(MediaStore.ACTION_IMAGE_CAPTURE))

@@ -34,10 +34,14 @@ class MascotasFragment : Fragment(R.layout.fragment_mascotas) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        var intent = Intent(context, RegistrarMascota::class.java)
+        if(arguments != null){
+            val email = requireArguments().getString("email")
+            intent.putExtra("email",email)
+        }
         fab = binding.agregar
         fab!!.setOnClickListener {
-            startActivity(Intent(context, RegistrarMascota::class.java))
+            startActivity(intent)
         }
     }
 
