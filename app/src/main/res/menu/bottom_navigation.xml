@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mascotas"
+        android:title="Mis Mascotas"
+        android:icon="@drawable/mascotas"/>
+    <item
+        android:id="@+id/paseadores"
+        android:title="Paseadores"
+        android:icon="@drawable/paseador"/>
+    <item
+        android:id="@+id/paseos"
+        android:title="Mis Paseos"
+        android:icon="@drawable/paseos"/>
+    <item
+        android:id="@+id/tips"
+        android:title="Tips"
+        android:icon="@drawable/info"/>
+
+</menu>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">paseando_pet</string>
+    <string name="nombre">PASEANDO PET</string>
+    <string name="Inicio">Iniciar Sesion</string>
+    <string name="email">Correo Electronico</string>
+    <string name="contrseña">Password123</string>
+    <string name="boton">Ingresar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
