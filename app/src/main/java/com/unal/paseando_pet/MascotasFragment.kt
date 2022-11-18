@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.StateSet
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.unal.paseando_pet.databinding.FragmentMascotasBinding
 
@@ -35,10 +36,10 @@ class MascotasFragment : Fragment(R.layout.fragment_mascotas) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var intent = Intent(context, RegistrarMascota::class.java)
-        if(arguments != null){
+       /* if(arguments != null){
             val email = requireArguments().getString("email")
             intent.putExtra("email",email)
-        }
+        }*/
         fab = binding.agregar
         fab!!.setOnClickListener {
             startActivity(intent)

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.unal.paseando_pet.databinding.ActivityLoginBinding
 import com.unal.paseando_pet.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

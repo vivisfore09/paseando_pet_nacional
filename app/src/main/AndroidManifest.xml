@@ -37,40 +37,23 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".LoginActivity"
-            android:exported="true" >
+            android:name=".LoginActivity">
+        </activity>
+        <activity
+            android:name=".RegistrarActivity" >
 
-        <meta-data
-            android:name="android.app.lib_name"
-            android:value="" />
 
         </activity>
         <activity
-            android:name=".RegistrarActivity"
-            android:exported="true" >
+            android:name=".HomeActivity">
+        </activity>
+        <activity
+            android:name=".RegistrarMascota">
 
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
 
         </activity>
         <activity
-            android:name=".HomeActivity"
-            android:exported="true" >
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
-        </activity>
-        <activity
-            android:name=".RegistrarMascota"
-            android:exported="true" >
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-
+            android:name=".RecuperarActivity">
         </activity>
     </application>
 

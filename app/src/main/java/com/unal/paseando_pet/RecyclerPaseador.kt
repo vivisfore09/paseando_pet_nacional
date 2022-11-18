@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class RecyclerPaseador(var listaPaseadores: MutableList<Paseador>):RecyclerView.Adapter<RecyclerPaseador.MiHolder>() {
 
@@ -21,6 +23,11 @@ class RecyclerPaseador(var listaPaseadores: MutableList<Paseador>):RecyclerView.
               ciudad = itemView.findViewById(R.id.ciudadP)
               telefono = itemView.findViewById(R.id.telefonoP)
               imagen = itemView.findViewById(R.id.foto)
+
+              itemView.setOnClickListener{
+
+                  Toast.makeText(itemView.context, "${nombres.text.toString()}", Toast.LENGTH_LONG).show()
+              }
           }
     }
 
@@ -35,8 +42,11 @@ class RecyclerPaseador(var listaPaseadores: MutableList<Paseador>):RecyclerView.
         var paseador = listaPaseadores[position]
         holder.nombres.text=paseador.nombre
         holder.ciudad.text=paseador.ciudad
-        holder.telefono.text=paseador.telefono
-        holder.imagen.setImageResource(paseador.foto)
+        holder.telefono.text=paseador.contacto
+        Glide.with(holder.itemView)
+            .load(paseador.foto)
+            .into(holder.imagen);
+
 
     }
 

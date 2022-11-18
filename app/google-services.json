@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "501518780818",
+    "project_id": "mascotas-unal-app",
+    "storage_bucket": "mascotas-unal-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501518780818:android:b85bf26cf29822fd84594b",
+        "android_client_info": {
+          "package_name": "com.unal.paseando_pet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501518780818-g98e7uslvid0i2tqfdsll1odoftcqjqd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.unal.paseando_pet",
+            "certificate_hash": "f328b8413ce9ada276b7191d892bab47b516344f"
+          }
+        },
+        {
+          "client_id": "501518780818-4paalavm80cvgoq60kb3h7ohq08ml6hc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc1jXP13xFnBvMK_bgeda91lWgU-2Z7T4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501518780818-4paalavm80cvgoq60kb3h7ohq08ml6hc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
