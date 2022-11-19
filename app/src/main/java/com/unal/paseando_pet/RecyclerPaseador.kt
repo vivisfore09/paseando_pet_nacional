@@ -4,13 +4,19 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class RecyclerPaseador(var listaPaseadores: MutableList<Paseador>):RecyclerView.Adapter<RecyclerPaseador.MiHolder>() {
+class RecyclerPaseador(var listaPaseadores: MutableList<Paseador>,private val itemClickListener: clickPaseador):
+    RecyclerView.Adapter<RecyclerPaseador.MiHolder>() {
+
+    interface clickPaseador{
+        fun onItemClick(paseador: Paseador)
+    }
 
     inner class MiHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
           lateinit var nombres:TextView
@@ -23,11 +29,6 @@ class RecyclerPaseador(var listaPaseadores: MutableList<Paseador>):RecyclerView.
               ciudad = itemView.findViewById(R.id.ciudadP)
               telefono = itemView.findViewById(R.id.telefonoP)
               imagen = itemView.findViewById(R.id.foto)
-
-              itemView.setOnClickListener{
-
-                  Toast.makeText(itemView.context, "${nombres.text.toString()}", Toast.LENGTH_LONG).show()
-              }
           }
     }
 
@@ -47,6 +48,9 @@ class RecyclerPaseador(var listaPaseadores: MutableList<Paseador>):RecyclerView.
             .load(paseador.foto)
             .into(holder.imagen);
 
+        holder.itemView.setOnClickListener{
+            itemClickListener.onItemClick(paseador)
+        }
 
     }
 

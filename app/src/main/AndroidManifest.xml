@@ -12,17 +12,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Paseando_pet"
         tools:targetApi="31">
+        <activity
+            android:name=".MapaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Detalle_PaseadorActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
 
         <provider
-            android:authorities="${applicationId}.fileprovider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"
-                />
+                android:resource="@xml/file_paths" />
         </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCYEaiyN9_cB5KR_j-kHmlz9e9Xax4OcqM" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -36,25 +54,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".LoginActivity">
-        </activity>
-        <activity
-            android:name=".RegistrarActivity" >
-
-
-        </activity>
-        <activity
-            android:name=".HomeActivity">
-        </activity>
-        <activity
-            android:name=".RegistrarMascota">
-
-
-        </activity>
-        <activity
-            android:name=".RecuperarActivity">
-        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegistrarActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".RegistrarMascota" />
+        <activity android:name=".RecuperarActivity" />
     </application>
 
 </manifest>
